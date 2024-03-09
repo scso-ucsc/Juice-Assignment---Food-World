@@ -354,7 +354,9 @@
 "Assets/GameManager.cs"
 "Assets/LowPolyWater_Pack/Scripts/LowPolyWater.cs"
 "Assets/Managers/PlayerManager.cs"
+"Assets/Scripts/Disco_Light.cs"
 "Assets/Scripts/Door_Trigger.cs"
+"Assets/Scripts/Soda_CanTrigger.cs"
 -langversion:9.0
 
 /deterministic

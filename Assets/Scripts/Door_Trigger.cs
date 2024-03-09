@@ -22,7 +22,6 @@ public class Door_Trigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other){ //If door is closed and Player enters trigger area, open door
         if(other.CompareTag("Player") && doorIsOpen == false){
-            Debug.Log("Player Detected!");
             door.Play("Door_Open", 0, 0f);
             doorIsOpen = true;
         }
