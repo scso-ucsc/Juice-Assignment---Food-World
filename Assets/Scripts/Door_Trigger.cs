@@ -22,7 +22,8 @@ public class Door_Trigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other){ //If door is closed and Player enters trigger area, open door
         if(other.CompareTag("Player") && doorIsOpen == false){
-            door.Play("Door_Open", 0, 0f);
+            AudioManager.instance.doorOpen(); //Playing door open audio
+            door.Play("Door_Open", 0, 0f); //Playing door open animation
             doorIsOpen = true;
         }
     }
@@ -35,6 +36,7 @@ public class Door_Trigger : MonoBehaviour
 
     IEnumerator closeDoor(){
         yield return new WaitForSeconds(2f); //Close door after 2 seconds
+        AudioManager.instance.doorClose(); //Playing door open audio
         door.Play("Door_Close", 0, 0f);
         doorIsOpen = false;
     }

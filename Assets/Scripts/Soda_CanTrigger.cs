@@ -22,6 +22,7 @@ public class Soda_CanTrigger : MonoBehaviour
     private void OnTriggerEnter(Collider other){ //If Player enters trigger area, play particles
         if(other.CompareTag("Player")){
             sodaFizzParticles.Play(); //Playing Particle Burst
+            AudioManager.instance.sodaPop(); //Playing audio
         }
     }
 }
